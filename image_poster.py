@@ -10,6 +10,17 @@ from googleapiclient.http import MediaIoBaseDownload
 import cloudinary.uploader
 import cloudinary
 
+import os
+
+# Recreate the google_drive_credentials.json file from env var
+creds_path = "google_drive_credentials.json"
+if not os.path.exists(creds_path):
+    creds_data = os.getenv("GOOGLE_CREDENTIALS_JSON")
+    if creds_data:
+        with open(creds_path, "w") as f:
+            f.write(creds_data.replace("\\n", "\n"))
+
+
 # === CONFIGURATION ===
 CSV_PATH = "mergedf.CSV"
 CREDENTIALS_FILE = "google_drive_credentials.json"
