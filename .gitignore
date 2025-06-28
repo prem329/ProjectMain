@@ -1,1 +1,2 @@
-echo google_drive_credentials.json > .gitignore
+google_drive_credentials.json
+.env

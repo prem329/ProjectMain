@@ -23,16 +23,16 @@ if not os.path.exists(creds_path):
 
 # === CONFIGURATION ===
 CSV_PATH = "mergedf.CSV"
-CREDENTIALS_FILE = "google_drive_credentials.json"
-IMAGES_FOLDER_ID = "1nVL4PnNrVCeW-qKZ770DsvlJKwdLqF46"
-ACCESS_TOKEN = "EAAS1RlssQeUBOZBLFZC7ZBNfHVweaznweuFFrHyeBnLZCZAAUNeQtg0ottd6KVJhPK31CW2pczpYIMHrG84BHZAcccPLe5k1tWsh8sR8wFo05FqIDlsQKv5DnFfWzcZBaYOGvCbGAzs8kMaZAugwuxQ6zqDqkMsLacchgsRkkpzVqAByT6IEjlOu"
-IG_USER_ID = "17841467036592820"
+CREDENTIALS_FILE = os.environ['GOOGLE_CREDENTIALS_JSON']
+IMAGES_FOLDER_ID = os.environ['IMAGES_FOLDER_ID']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+IG_USER_ID = os.environ['IG_USER_ID']
 
 # === CLOUDINARY SETUP ===
 cloudinary.config(
-    cloud_name="dskl1auty",
-    api_key="287383892435529",
-    api_secret="7ykMGLhlMzxEXVjk-pbP1ZuOGD8"
+    cloud_name=os.environ['cloud_name'],
+    api_key=os.environ['api_key'],
+    api_secret=os.environ['api_secret']
 )
 
 # === Google Drive Setup ===

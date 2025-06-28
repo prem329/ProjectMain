@@ -17,10 +17,10 @@ if not os.path.exists(creds_path):
 
 # === CONFIGURATION ===
 CSV_PATH = "mergedf.CSV"
-CREDENTIALS_FILE = "google_drive_credentials.json"
-ACCESS_TOKEN = "EAAS1RlssQeUBOZBLFZC7ZBNfHVweaznweuFFrHyeBnLZCZAAUNeQtg0ottd6KVJhPK31CW2pczpYIMHrG84BHZAcccPLe5k1tWsh8sR8wFo05FqIDlsQKv5DnFfWzcZBaYOGvCbGAzs8kMaZAugwuxQ6zqDqkMsLacchgsRkkpzVqAByT6IEjlOu"
-IG_USER_ID = "17841467036592820"
-VIDEOS_FOLDER_ID = "16wvWPSRsCRSBhoB9R12T9igTEz9Flu84"  # ID of the 'videos' subfolder
+CREDENTIALS_FILE = os.environ['GOOGLE_CREDENTIALS_JSON']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+IG_USER_ID = os.environ['IG_USER_ID']
+VIDEOS_FOLDER_ID = os.environ['VIDEOS_FOLDER_ID']  # ID of the 'videos' subfolder
 
 
 # === Google Drive Setup ===
